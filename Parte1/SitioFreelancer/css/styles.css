@@ -1,0 +1,352 @@
+:root{  /*Almacenar variables de css */
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #ffC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisclaro: #DFE9F3;
+    
+} /*Custom properties */
+
+/* Globales */
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; 
+    scroll-snap-type: y proximity; /* Tambien esta el proximity */
+}
+ 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* SCROLL SNAP */
+.servicios, 
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center; /* Permite que el elemento se alinee en el centro del viewport al hacer scroll */
+    scroll-snap-stop: always; /* Asegura que el scroll se detenga en este elemento */
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Linear-gradient (pasamos dirección y color */
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
+}
+
+.contenedor {
+    max-width: 120rem; /* Toma 1200px como máx y solo si hay ese espacio disponible */
+   /*
+    margin-top: 10rem;
+    margin-right: auto;
+    margin-bottom: 0rem; /*Margen hacia abajo 
+    margin-left: auto;
+    El código de abajo es el mismo que el de arriba
+    */
+    margin: 0 auto;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase; /* Hace que el texto se muestre en mayúsculas */
+    font-weight: bold;
+    border-radius: .5rem; /* Bordes redondeados */
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+.boton:hover {
+    background-color: var(--primario);
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+@media (min-width: 480px){ /* Media query, para que se aplique a partir de 480px */
+    .boton{
+        width: auto; /* Ancho automático */
+    }
+}
+
+.sombra {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
+              0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem; /* Bordes redondeados */
+    margin-top: 2rem; /* Margen superior */
+
+    
+}
+
+/* TIPOGRAFÍA */
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+
+/* TITULOS */
+.titulo span{
+    font-size: 2rem;
+}
+
+/* UTILIDADES */
+.w-sm-100{
+    width: 100%;
+}
+
+@media (min-width: 768px){ /* Media query, para que se aplique a partir de 768px */
+    .w-sm-100{
+        width: auto;
+    }
+    
+}
+
+.flex{
+    display: flex; /* Habilita flexbox en este elemento */
+}
+.alinear-derecha{
+    justify-content: flex-end; /* Alinea el contenido al final del eje principal (derecha) */
+}
+
+
+
+/*NAVEGACIÓN PRINCIPAL */
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{
+    /* margin-top: 10rem;  Quiere decir del límite del elemento hacia afuera (separación que voy a tener */
+    display: flex; /* Nos habilita flexbox en este elemento, y tenemos acceso a nuevas propiedades */ 
+    flex-direction: column; 
+    align-items: center;
+    /* justify-content: space-between;  Permite mover el contenido horizontalmente*/ 
+    /* Distribuir el contenido utilizamos propiedades con el space */ 
+}
+
+@media (min-width: 768px){ /* Media query, para que se aplique a partir de 768px */
+    .navegacion-principal{
+        flex-direction: row; /* Cambia la dirección de la columna a fila */
+        justify-content: space-between; /* Centra el contenido horizontalmente */
+    }   
+}
+
+@media (min-width: 480px){ /* Media query, para que se aplique a partir de 480px */
+    .navegacion-principal{
+        flex-direction: row; 
+        align-items: center;
+    }   
+    
+}
+
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem; /* Desde adentro, comportamiento ideal para */
+
+    /* 
+        font - propiedades del texto
+        text - modificaciones a la fuente
+    */ 
+    font-size: 2rem;
+    font-weight: bold; /* Por default siempre tiene 400 */
+}
+
+.navegacion-principal a:hover{ /* Es el cambio de color de fondo cuando el usuario pasa el cursor en el item*/
+    background-color: var(--primario);
+    color: var(--negro);
+}
+
+/*
+.navegacion-principal a:visited{
+    Es cuando el usuario ya visito el enlace
+}
+*/
+
+/*
+.navegacion-principal a:focus{
+    Es cuando el usuario visita los enlaces pero por medio de lo que viene siendo el teclado
+}
+*/
+
+/* Hero  */
+.hero{
+    background-image: url(../Images/atlas.jpg);
+    color: var(--blanco);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative; /* */
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6); /** Anterior **/
+    background-color: rgb(0 0 0 / 60%);
+    /*bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    */
+    width: 100%;
+    height: 100%;
+
+    /** Código para alinear vertical/horizontal (forma sencilla) **/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+
+.contenido-hero .ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* SERVICIOS */
+
+@media (min-width: 768px){
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Repite el elemento tantas veces como sea posible  en la misma fila*/
+        column-gap: 2rem; /* Espacio entre los elementos */
+    }
+} 
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+    margin-bottom: 1rem;
+    text-align: center; /* Centra el texto del título */
+}
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    display: flex; /* Permite alinear los iconos */
+    justify-content: space-evenly; /* Distribuye los iconos uniformemente */
+    align-items: center; /* Centra los iconos verticalmente */
+    margin: 0 auto; /* Centra el contenedor */
+}
+/* CONTACTO */
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin: 0 auto; /* Centra el formulario */
+    border-radius: 1rem;
+    padding: 2rem;  
+
+    grid-template-columns: repeat(2, 1fr); /* Repite el elemento tantas veces como sea posible  en la misma fila*/
+    column-gap: 2rem; /* Espacio entre los elementos */
+}
+.formulario fieldset{
+    border: none; /* Elimina el borde del fieldset */
+    margin-bottom: 2rem; /* Espacio entre los fieldsets */
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem; 
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem; /* Espacio debajo del legend */
+    color: var(--primario); 
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos{
+        display: grid; /* Utiliza grid para organizar los campos */
+        grid-template-columns: repeat(2, 1fr); /* Repite el elemento tantas veces como sea posible  en la misma fila*/
+        grid-template-rows: auto auto 20rem;
+        column-gap: 2rem; /* Espacio entre los elementos */
+        
+    }
+    
+    
+    .campo:nth-child(3), 
+    .campo:nth-child(4)
+    { /* Division de posiciones en grid */
+        grid-column: 1 / -1; /* Ocupa toda la fila */        
+    }
+    
+
+}
+
+    
+.campo {
+    margin-bottom: 1rem;
+
+}
+
+.campo label {
+    color: var(--blanco);
+    display: block; /* Hace que el label ocupe todo el ancho */
+    margin-bottom: 1rem; /* Espacio debajo del label */
+    font-weight: bold; /* Hace que el texto del label sea negrita */
+}
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;;
+}
+
+/*
+-- Formas de escribir los selectores en general --
+ .campo input[type="text"]{
+    background-color: var(--secundario);
+
+} */
+
+
+.campo input {
+    width: 100%; /* Hace que el input ocupe todo el ancho del contenedor */
+    padding: 1.5rem; /* Espacio interno del input */
+    border-radius: 1.5rem; /* Bordes redondeados */
+    border: none; /* Elimina el borde del input */
+    font-size: 1.6rem; /* Tamaño de fuente del input */
+}
+
+.enviar .boton{
+    margin-top: 2rem; /* Espacio encima del botón */
+    padding: 1.5rem; /* Espacio interno del botón */
+}
+
+/* FOOTER */
+.footer{
+    background-color: var(--grisclaro);
+    color: var(--negro);
+    padding: 2rem;
+    text-align: center; /* Centra el texto del footer */
+}
