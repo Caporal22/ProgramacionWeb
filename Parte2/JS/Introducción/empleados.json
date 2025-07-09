@@ -1,0 +1,39 @@
+{
+  "empleados": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "edad": 30,
+      "puesto": "Desarrollador"
+    },
+    {
+      "id": 2,
+      "nombre": "Ana",
+      "apellido": "Gómez",
+      "edad": 25,
+      "puesto": "Diseñadora"
+    },
+    {
+      "id": 3,
+      "nombre": "Luis",
+      "apellido": "Martínez",
+      "edad": 35,
+      "puesto": "Gerente"
+    },
+    {
+      "id": 4,
+      "nombre": "María",
+      "apellido": "López",
+      "edad": 28,
+      "puesto": "Analista"
+    },
+    {
+      "id": 5,
+      "nombre": "Carlos",
+      "apellido": "Sánchez",
+      "edad": 40,
+      "puesto": "Director"
+    }
+  ]
+}

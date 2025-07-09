@@ -1,33 +1,67 @@
 body {
-    background: #4b6cb7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0;
+  padding: 0;
+  background-color: #fff8dc; /* Fondo cremoso tradicional */
+  color: #333;
+  font-family: "Carrois Gothic SC", sans-serif;
 }
 
-h1, p, a {
-    font-family: 'Carrois Gothic SC', sans-serif;
-    display: block;
-    text-align: center;
-    line-height:.8;
-    color: white;
-}
-.contenido {
-    max-width: 1200px;
-    margin: 5rem auto 0 auto;
-    color: white;
-    font-size: 3rem;
-    font-family: 'Carrois Gothic SC', sans-serif;
-}
-h1 {
-    font-size: 4rem;
-}
+h1,
+p,
 a {
-    font-size: 1.4rem;
+  text-align: center;
+  display: block;
+  line-height: 1.1;
+  color: #d32f2f; /* Rojo suerte */
 }
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
 p {
-    font-size: 2.2rem;
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+}
+
+a {
+  font-size: 1.4rem;
+  text-decoration: none;
 }
 
 .hashtag {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #555;
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+.contenido {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 3px solid #ffd700;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(211, 47, 47, 0.2);
+}
+
+/* Botón dorado */
+#btn_notificacion {
+  display: block;
+  margin: 3rem auto 0 auto;
+  background-color: #ffd700;
+  color: #333;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+#btn_notificacion:hover {
+  background-color: #e5c100;
 }
