@@ -1,0 +1,25 @@
+{
+  "name": "festivaldemusica",
+  "version": "1.0.0",
+  "description": "Utilizando SASS y NPM",
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp"
+  ],
+  "homepage": "https://github.com/Caporal22/ProgramacionWeb#readme",
+  "bugs": {
+    "url": "https://github.com/Caporal22/ProgramacionWeb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caporal22/ProgramacionWeb.git"
+  },
+  "license": "ISC",
+  "author": "Daniel Sánchez",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
