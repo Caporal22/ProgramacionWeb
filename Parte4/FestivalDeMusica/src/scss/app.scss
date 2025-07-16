@@ -1,5 +1,4 @@
-body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
+@forward "base";
+@forward "layout";
+
+// @forward "base/variables"; // Forward variables to be used in other files
