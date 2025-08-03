@@ -378,21 +378,22 @@ body > section {
 .header {
   background-color: #4cb8b3;
 }
+.header .contenido-header {
+  padding: 2rem;
+}
 @media (max-width: 768px) {
-  .header {
+  .header .contenido-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
-
-h1 {
+.header h1 {
   color: #ffffff;
   text-align: center;
 }
 @media (max-width: 768px) {
-  h1 {
-    text-align: left;
+  .header h1 {
     margin: 0;
   }
 }
@@ -415,3 +416,5 @@ h1 {
 .navegacion-principal a:hover, .navegacion-principal a:active {
   color: #fdda00;
 }
+
+/*# sourceMappingURL=app.css.map */

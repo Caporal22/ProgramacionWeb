@@ -2,7 +2,7 @@
   "name": "festivaldemusica",
   "version": "1.0.0",
   "description": "Utilizando SASS y NPM",
-  "type": "module",
+  "type": "module", 
   "keywords": [
     "SASS",
     "NPM",

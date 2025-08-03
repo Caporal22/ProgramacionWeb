@@ -1,24 +1,29 @@
-@use "base/variables" as v;
-@use "base/mixins" as m;
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
 
 .header {
   background-color: v.$verde;
 
-  @include m.tablet {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .contenido-header {
+    padding: 2rem;
+    @include m.tablet{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;  
+    }
+    
   }
-}
-
-h1 {
+  h1 {
   color: v.$blanco;
   text-align: center;
   @include m.tablet {
-    text-align: left;
     margin: 0;
+    
+  }
   }
 }
+
+
 
 .navegacion-principal {
   display: flex;

@@ -21,6 +21,6 @@ export function watchFiles() {
 
 export function dev() {
   // Inicia el observador de archivos
-  watch("src/scss/**/*.scss", css);
+  watch("src/scss/**/*.scss", css); 
   // watch(js);
 }
