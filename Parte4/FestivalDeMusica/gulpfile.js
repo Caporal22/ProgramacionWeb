@@ -6,11 +6,10 @@ import gulpSass from "gulp-sass";
 const sass = gulpSass(dartSass); // Compilar SASS a CSS
 
 export function css(done) {
-  src("src/scss/app.scss") // Ruta del archivo SASS
+  src("src/scss/app.scss", {sourcemaps: true}) // Ruta del archivo SASS
     .pipe(sass().on("error", sass.logError)) // Compilar SASS a CSS
-    .pipe(dest("build/css")); // Ruta de destino del CSS compilado
+    .pipe(dest("build/css", {sourcemaps: true})); // Ruta de destino del CSS compilado
 
-  done();
   done();
 }
 

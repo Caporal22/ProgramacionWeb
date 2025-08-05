@@ -2,25 +2,25 @@
 
 
 @mixin telefono {
-  @media (max-width: v.$telefono) {
+  @media (min-width: v.$telefono) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (max-width: v.$tablet) {
+  @media (min-width: v.$tablet) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (max-width: v.$desktop) {
+  @media (min-width: v.$desktop) {
     @content;
   }
 }
 
 @mixin desktop-grande {
-  @media (max-width: v.$desktop-grande) {
+  @media (min-width: v.$desktop-grande) {
     @content;
   }
 }
@@ -29,4 +29,16 @@
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
+}
+
+@mixin grid($columnas, $gap: 5rem) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $gap;
+}
+
+@mixin resetear-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
