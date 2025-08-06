@@ -17,9 +17,9 @@
       <div class="contenedor contenido-header">
         <h1>Caporal Fest</h1>
         <nav class="navegacion-principal">
-          <a href="#">Line Up</a>
-          <a href="#">Galería</a>
-          <a href="#">Boletos</a>
+          <a href="#lineup">Line Up</a>
+          <a href="#galeria">Galería</a>
+          <a href="#boletos">Boletos</a>
         </nav>
       </div>
     </header>
@@ -30,7 +30,7 @@
           <p>Marzo 2026, Guadalajara, Jal</p>
         </div>
       </div>
-        <video autoplay loop muted>
+        <video autoplay muted loop>
           <source src="video/dj.mp4" type="video/mp4" /> <!-- Video del DJ -->
           <source src="video/dj.ogg" type="video/ogg" /> 
           <source src="video/dj.webm" type="video/webm" /> 
@@ -40,7 +40,11 @@
 
     <section class="sobre-festival">
       <div class="imagen">
-        <img src="src/img/imagen_dj.jpg" alt="Imagen del Festival" />
+        <picture>
+            <source srcset="build/img/imagen_dj.avif" type="image/avif" />
+            <source srcset="build/img/imagen_dj.webp" type="image/webp" />
+            <img width="300" height="200" loading="lazy" src="build/img/imagen_dj.jpg" alt="Imagen del Festival" />
+        </picture>
       </div>
       <div class="contenido-festival">
         <h2>Caporal Fest</h2>
@@ -160,6 +164,13 @@
     </div> <!--.escenarios-contenedor -->
 </section>
 
+<section id="galeria" class="galeria">
+    <h3>Galería</h3>
+    <div class="galeria-imagenes">
+
+    </div>
+</section>
+
 <section id="boletos" class="contenedor-boletos">
     <h3>Boletos</h3>
 
@@ -205,6 +216,7 @@
         Todos los derechos reservados Caporal Fest 2026 &copy;
       </p>
     </footer>
+    <script src="build/js/app.js"></script> <!-- Archivo JS compilado -->
 
   </body>
 </html>

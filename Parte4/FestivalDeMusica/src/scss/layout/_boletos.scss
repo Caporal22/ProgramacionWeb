@@ -19,8 +19,9 @@
 
 .pase {
     transition: transform .3s ease-in-out;
+    z-index: 0;
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
     &-nombre { // TIPO DE PASE con amperson (&)
         font-size: 3.6rem;
